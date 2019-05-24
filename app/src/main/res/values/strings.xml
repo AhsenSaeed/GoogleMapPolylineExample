@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GoogleMapsPolylineExample</string>
+    <string name="get_direction">GetDirection</string>
+    <string name="source">Source in (lat,lng)</string>
+    <string name="destination">Destination in (lat,lng)</string>
+</resources>
