@@ -23,10 +23,10 @@ import spartons.com.googlemapspolylineexample.directionModules.DirectionFinder;
 import spartons.com.googlemapspolylineexample.directionModules.DirectionFinderListener;
 import spartons.com.googlemapspolylineexample.directionModules.Route;
 
-import static spartons.com.googlemapspolylineexample.GoogleMapHelper.buildCameraUpdate;
-import static spartons.com.googlemapspolylineexample.GoogleMapHelper.defaultMapSettings;
-import static spartons.com.googlemapspolylineexample.GoogleMapHelper.getDefaultPolyLines;
-import static spartons.com.googlemapspolylineexample.GoogleMapHelper.getDottedPolylines;
+import static spartons.com.googlemapspolylineexample.util.GoogleMapHelper.buildCameraUpdate;
+import static spartons.com.googlemapspolylineexample.util.GoogleMapHelper.defaultMapSettings;
+import static spartons.com.googlemapspolylineexample.util.GoogleMapHelper.getDefaultPolyLines;
+import static spartons.com.googlemapspolylineexample.util.GoogleMapHelper.getDottedPolylines;
 import static spartons.com.googlemapspolylineexample.util.UiHelper.showAlwaysCircularProgressDialog;
 
 public class MainActivity extends AppCompatActivity implements DirectionFinderListener {

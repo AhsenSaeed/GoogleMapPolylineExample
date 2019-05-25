@@ -1,4 +1,4 @@
-package spartons.com.googlemapspolylineexample;
+package spartons.com.googlemapspolylineexample.util;
 
 import android.graphics.Color;
 
@@ -21,7 +21,7 @@ import java.util.List;
  * 5/25/19}
  */
 
-class GoogleMapHelper {
+public class GoogleMapHelper {
 
     private static final int ZOOM_LEVEL = 18;
     private static final int TILT_LEVEL = 25;
@@ -30,20 +30,20 @@ class GoogleMapHelper {
     private static final Dot DOT = new Dot();
     private static final List<PatternItem> PATTERN_DOTTED = Arrays.asList(DOT, GAP);
 
-    static PolylineOptions getDefaultPolyLines(List<LatLng> points) {
+    public static PolylineOptions getDefaultPolyLines(List<LatLng> points) {
         PolylineOptions polylineOptions = new PolylineOptions()
                 .color(Color.BLUE);
         for (LatLng point : points) polylineOptions.add(point);
         return polylineOptions;
     }
 
-    static PolylineOptions getDottedPolylines(List<LatLng> points) {
+    public static PolylineOptions getDottedPolylines(List<LatLng> points) {
         PolylineOptions polylineOptions = getDefaultPolyLines(points);
         polylineOptions.pattern(PATTERN_DOTTED);
         return polylineOptions;
     }
 
-    static void defaultMapSettings(GoogleMap googleMap) {
+    public static void defaultMapSettings(GoogleMap googleMap) {
         googleMap.getUiSettings().setZoomControlsEnabled(true);
         googleMap.getUiSettings().setMapToolbarEnabled(false);
         googleMap.getUiSettings().setRotateGesturesEnabled(true);
@@ -53,7 +53,7 @@ class GoogleMapHelper {
         googleMap.setBuildingsEnabled(true);
     }
 
-    static CameraUpdate buildCameraUpdate(LatLng latLng) {
+    public static CameraUpdate buildCameraUpdate(LatLng latLng) {
         CameraPosition cameraPosition = new CameraPosition.Builder()
                 .target(latLng)
                 .tilt(TILT_LEVEL)
